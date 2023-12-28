@@ -1,0 +1,82 @@
+[
+    {
+        "id": "0",
+        "comment": "This movie is awesome. I could watch again",
+        "movie_name":"The GodFather Part 2",
+        "user": "yigitkirpicik",
+        "date": "28.12.2023"
+        
+    },
+    {
+        "id": "1",
+        "comment": "I don't like this concept, maybe it's not for me",
+        "movie_name":"Life",
+        "user": "nbc",
+        "date": "15.12.2023"
+        
+    },
+    {
+        "id": "2",
+        "comment": "barbie (2023) but for mentally ill people",
+        "movie_name":"Poor Things",
+        "user": "Lara",
+        "date": "25.11.2023"
+        
+    },
+    {
+        "id": "3",
+        "comment": "If there is an Adam Driver doing an Italian accent movie released during the holidays, my family will be there🫡 Was having a hard time getting into this towards the beginning but was hooked by the end.",
+        "movie_name":"Ferrari",
+        "user": "Blake",
+        "date": "25.12.2023"
+        
+    },
+    {
+        "id": "4",
+        "comment": "I love (this movie) too much. What can I say? But I'm reigning it in... I'M REIGNING IT IN",
+        "movie_name":"Maestro",
+        "user": "Blake",
+        "date": "12.12.2023"
+        
+    },
+    {
+        "id": "5",
+        "comment": "'i know that you love me because i feel strong.' final movie of 27 🎈",
+        "movie_name":"Sexy Beast",
+        "user": "radioheadass",
+        "date": "05.03.2023"
+        
+    },
+    {
+        "id": "6",
+        "comment": "this the one.",
+        "movie_name":"Lady Bird",
+        "user": "Younis",
+        "date": "30.10.2023"
+        
+    },
+    {
+        "id": "8",
+        "comment": "save me swann arlaud save me",
+        "movie_name":"Anatomy of a Fall",
+        "user": "Zoë Rose Bryant ",
+        "date": "20.12.2023"
+        
+    },
+    {
+        "id": "9",
+        "comment": "i don't know what is good or bad anymore i have no idea what anything is or how to feel at all was i even tbere",
+        "movie_name":"Maestro",
+        "user": "Sarah Hagi",
+        "date": "05.12.2023"
+        
+    },
+    {
+        "id": "10",
+        "comment": "Doing my annual Hunger Games rewatch as a light mental reset",
+        "movie_name":"The Hunger Games",
+        "user": "wendyhui",
+        "date": "24.12.2023"
+        
+    }
+]

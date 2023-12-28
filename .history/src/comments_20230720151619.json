@@ -1,0 +1,38 @@
+[
+    {
+        "id": "0",
+        "news_head": "BETTING GUIDE: Who are the favourites as F1 heads to Hungary?",
+        "news_image":"https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1689844633/fom-website/2023/Hungary/GettyImages-1242222139.jpg.transform/9col/image.jpg",
+        "news_content": "Can anyone dethrone Red Bull? That's the question everyone is asking as the F1 circus descends on Budapest for the 11th race weekend of the season. Who do the odds predict will be the closest challengers to the Bulls, with so many upgrades now coming into play?188BET's odds are presented in decimal form: for every $1 wagered you would win the figure represented by the odds; so, if Verstappen is favourite at 1.50, you would win $1.50 for every dollar bet."
+    },
+    {
+        "id": "1",
+        "news_head": "'He had the pace' Tsunoda praises departing De Vries as he looks forward to working with 'experienced' Ricciardo",
+        "news_image":"https://media.formula1.com/image/upload/f_auto/q_auto/v1689846218/fom-website/2023/Hungary/TSURICDiagonalSplit.jpg.transform/9col/image.jpg",
+        "news_content": "Yuki Tsunoda is looking forward to working with his new AlphaTauri team mate Daniel Ricciardo, while also paying tribute to his departing 'friend' Nyck de Vries, revealing just how much he learned from working alongside the Dutch driver. Following Pierre Gasly's departure for Alpine, De Vries signed with AlphaTauri for the 2023 campaign. However, after a difficult start to his rookie campaign that saw him fail to score a point, the decision was made to move on from the former Formula E champion."
+    },
+    {
+        "id": "2",
+        "news_head": "Formula 1 and Sky Group announce details of first-ever children's broadcast at Hungarian Grand Prix",
+        "news_image":"https://media.formula1.com/image/upload/f_auto/q_auto/v1689850944/fom-website/2023/Hungary/Avatars.png.transform/9col/image.png",
+        "news_content": "Formula 1 and Sky Group have announced further details of a broadcast specifically designed for children that will air at this weekend's Hungarian Grand Prix. The broadcast, which is the first of its kind in F1 and motorsport, will feature a dedicated International Feed aimed at enhancing the viewing experience for younger fans and be presented by children on both Sky UK and Sky Deutschland."
+    },
+    {
+        "id": "3",
+        "news_head": "De Vries admits 'it hurts' as he speaks out after losing AlphaTauri F1 seat",
+        "news_image":"https://media.formula1.com/image/upload/f_auto/q_auto/v1689785107/fom-website/2023/Miscellaneous/de-vries-silverstone-2023.png.transform/9col/image.png",
+        "news_content": "Nyck de Vries has offered up his first public comments after the news broke that he will be replaced at AlphaTauri by Daniel Ricciardo from the Hungarian Grand Prix onwards.  De Vries made his full-time F1 debut with the Red Bull-backed outfit in 2023 having impressed as a stand-in for Williams at last year's Italian Grand Prix scoring points on his debut."
+    },
+    {
+        "id": "4",
+        "news_head": "BEYOND THE GRID: F1 engine guru Mario Illien on powering McLaren to success, hybrid tech, top secret projects and much more",
+        "news_image":"https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1689781535/fom-website/2023/BEYOND%20THE%20GRID/Illien%201920x1080.png.transform/9col/image.png",
+        "news_content": "Tom Clarkson is back with another instalment of Formula 1's Beyond the Grid podcast, and this week he is joined by Mario Illien, who gives a fascinating insight into the world of a power unit designer. Illien played a key role in McLaren's F1 success in the late-1990s, developing the engines with Mercedes that would help Mika Hakkinen win two drivers' championships in 1998 and 1999 as well as the constructors' title for McLaren in 1998."
+    },
+    {
+        "id": "5",
+        "news_head": "THIS WEEK IN F1: 10 quiz questions on all the F1 news ahead of the Hungarian Grand Prix",
+        "news_image":"https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1689694317/fom-website/2023/Miscellaneous/quiz%20header.jpg.transform/9col/image.jpg",
+        "news_content": "A lot can happen in a week, and that certainly applies to the world of Formula 1. While there was no racing this weekend, there were plenty of interesting storylines to keep us entertained. From a sudden driver swap to the Goodwood Festival of Speed, there has been a lot of action away from the track in recent days. But, how much of it do you remember?"
+    }
+]

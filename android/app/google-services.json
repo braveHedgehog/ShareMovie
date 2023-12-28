@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252013846070",
+    "project_id": "sharemovie1-886a8",
+    "storage_bucket": "sharemovie1-886a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252013846070:android:59e0a7e21a847a6109c297",
+        "android_client_info": {
+          "package_name": "com.sharemovie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2GzTGhMgxfKEmVTMjOT66Oh9ZvYFU8Yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
