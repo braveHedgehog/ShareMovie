@@ -6,11 +6,10 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#2c3440',
   },
-  inner_container: {
-    flexDirection: 'row',
-  },
   button: {
-    paddingHorizontal: 40,
+    flex: 1,
+    flexDirection: 'row',
+    //padding: 20,
   },
   buttonText: {
     color: 'white',

@@ -41,6 +41,7 @@ const PersonMovie = props => {
             keyExtractor={item => item.id.toString()}
             data={movies}
             horizontal={true}
+            numColumns={1}
             renderItem={({item}) => (
               <PeopleJobCard
                 item={item}

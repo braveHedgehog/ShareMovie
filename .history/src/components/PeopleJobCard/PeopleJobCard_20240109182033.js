@@ -12,6 +12,12 @@ const PeopleJobCard = ({item, onPress}) => {
           style={Styles.trendingPeopleImage}
         />
       </TouchableWithoutFeedback>
+      <Text style={Styles.name} >
+            {item.name}
+        </Text>
+        <Text style={Styles.bio} >
+            {item.biography}
+        </Text>
       <Text style={Styles.trendingPeopleName}>{item.name}</Text>
       <Text style={Styles.trendingPeopleCharacter}>{item.character}</Text>
       <Text style={Styles.trendingPeopleCharacter}>{item.job}</Text>

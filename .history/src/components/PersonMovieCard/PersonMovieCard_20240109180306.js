@@ -40,7 +40,7 @@ const PersonMovie = props => {
           <FlatList
             keyExtractor={item => item.id.toString()}
             data={movies}
-            horizontal={true}
+            ItemSeparatorComponent
             renderItem={({item}) => (
               <PeopleJobCard
                 item={item}

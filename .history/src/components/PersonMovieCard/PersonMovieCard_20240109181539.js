@@ -40,7 +40,7 @@ const PersonMovie = props => {
           <FlatList
             keyExtractor={item => item.id.toString()}
             data={movies}
-            horizontal={true}
+            horizontal
             renderItem={({item}) => (
               <PeopleJobCard
                 item={item}

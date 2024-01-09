@@ -36,7 +36,7 @@ const PersonMovie = props => {
       {loading ? (
         <ActivityIndicator size="large" color={'white'} />
       ) : (
-        <View style={styles.heading}>
+        <View>
           <FlatList
             keyExtractor={item => item.id.toString()}
             data={movies}

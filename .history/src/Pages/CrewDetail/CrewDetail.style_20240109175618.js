@@ -10,7 +10,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   button: {
-    paddingHorizontal: 40,
+    flexDirection: 'row',
   },
   buttonText: {
     color: 'white',

@@ -37,7 +37,7 @@ const CrewDetail = props => {
       case 'Crew':
         return <PersonCrewMovie />;
       default:
-        return <BiographyContent />;
+        return null;
     }
   };
   const BiographyContent = () => <PersonCard person={people} />;

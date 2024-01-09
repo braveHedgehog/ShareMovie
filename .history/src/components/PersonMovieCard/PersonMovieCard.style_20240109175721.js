@@ -3,7 +3,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 export default StyleSheet.create({
     heading: {
-        marginTop: 200,
+        marginTop: 100,
         fontSize: 19,
         color: 'white',
         margin: 10,

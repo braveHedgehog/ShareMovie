@@ -40,7 +40,9 @@ const PersonMovie = props => {
           <FlatList
             keyExtractor={item => item.id.toString()}
             data={movies}
-            horizontal={true}
+            numColumns={Math.ceil(movies.length / 2)}
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}
             renderItem={({item}) => (
               <PeopleJobCard
                 item={item}

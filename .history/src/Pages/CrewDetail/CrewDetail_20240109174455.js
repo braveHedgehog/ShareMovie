@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unstable-nested-components */
 import React, {useState, useEffect} from 'react';
-import {ScrollView, TouchableOpacity, Text, View} from 'react-native';
+import {ScrollView, TouchableOpacity, Text} from 'react-native';
 import {GET} from '../../services/Api';
 import PersonCard from '../../components/PersonCard/PersonCard';
 import {useNavigation} from '@react-navigation/native';
@@ -34,10 +34,10 @@ const CrewDetail = props => {
         return <BiographyContent />;
       case 'Movie':
         return <PersonMovie />;
-      case 'Crew':
+        case 'Crew':
         return <PersonCrewMovie />;
       default:
-        return <BiographyContent />;
+        return null;
     }
   };
   const BiographyContent = () => <PersonCard person={people} />;
@@ -57,41 +57,40 @@ const CrewDetail = props => {
   );
   return (
     <ScrollView style={style.container}>
-      <View style={style.inner_container}>
-        <TouchableOpacity
-          style={style.button}
-          onPress={() => setActiveContent('Bio')}>
-          <Text
-            style={[
-              style.buttonText,
-              activeContent === 'Bio' && style.activeText,
-            ]}>
-            Bio
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={style.button}
-          onPress={() => setActiveContent('Movie')}>
-          <Text
-            style={[
-              style.buttonText,
-              activeContent === 'Movie' && style.activeText,
-            ]}>
-            Actor
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={style.button}
-          onPress={() => setActiveContent('Crew')}>
-          <Text
-            style={[
-              style.buttonText,
-              activeContent === 'Crew' && style.activeText,
-            ]}>
-            Crew
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity
+        style={style.button}
+        onPress={() => setActiveContent('Bio')}>
+        <Text
+          style={[
+            style.buttonText,
+            activeContent === 'Bio' && style.activeText,
+          ]}>
+          Place Description
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={style.button}
+        onPress={() => setActiveContent('Movie')}>
+        <Text
+          style={[
+            style.buttonText,
+            activeContent === 'Movie' && style.activeText,
+          ]}>
+          Gallery
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={style.button}
+        onPress={() => setActiveContent('Crew')}>
+        <Text
+          style={[
+            style.buttonText,
+            activeContent === 'Crew' && style.activeText,
+          ]}>
+          Gallery
+        </Text>
+      </TouchableOpacity>
+      <Button onPress={goMovies} text="Go To Movies" loading={loading} />
       {renderContent()}
     </ScrollView>
   );

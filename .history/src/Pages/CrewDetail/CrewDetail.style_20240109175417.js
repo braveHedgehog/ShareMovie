@@ -5,12 +5,10 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#2c3440',
-  },
-  inner_container: {
     flexDirection: 'row',
   },
   button: {
-    paddingHorizontal: 40,
+    flex: 1,
   },
   buttonText: {
     color: 'white',
