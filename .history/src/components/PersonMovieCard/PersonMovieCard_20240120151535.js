@@ -38,10 +38,10 @@ const PersonMovie = props => {
       ) : (
         <View style={styles.heading}>
           <FlatList
-            style={styles.list}
             keyExtractor={item => item.id.toString()}
             data={movies}
             numColumns={3}
+            
             //horizontal={true}
             renderItem={({item}) => (
               <PeopleJobCard

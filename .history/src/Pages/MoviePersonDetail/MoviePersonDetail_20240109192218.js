@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import {GET} from '../../services/Api';
 import {IMAGE_POSTER_URL} from '../../config';
-import Styles from './MovieDetail.Style';
+import Styles from './MoviePersonDetail.style';
 import CastCard from '../../components/CastCard';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import ContentInputModal from '../../components/Modal/ContentImputModal/ContentInputModal';
@@ -23,7 +23,7 @@ import {
   removeFavorite,
 } from '../../context/FavoriteMovies/FavoriteSlice';
 
-const MovieDetail = props => {
+const MoviePersonDetail = props => {
   const [loading, setLoading] = useState(true);
   const [details, setDetails] = useState();
   const [inputModalVisible, setInputModalVisible] = useState(false);
@@ -123,13 +123,13 @@ const MovieDetail = props => {
               </TouchableOpacity>
             </View>
             <CastCard
+              title="Crew"
+              url={`/movie/${props.route.params.movieId}/credits`}
+            />
+            <CastCard
               title="Cast"
               url={`/movie/${props.route.params.movieId}/credits`}
               isForPage="details"
-            />
-            <CastCard
-              title="Crew"
-              url={`/movie/${props.route.params.movieId}/credits`}
             />
             <ContentInputModal
               visible={inputModalVisible}
@@ -144,4 +144,4 @@ const MovieDetail = props => {
   );
 };
 
-export default MovieDetail;
+export default MoviePersonDetail;

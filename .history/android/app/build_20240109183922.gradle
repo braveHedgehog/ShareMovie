@@ -83,14 +83,13 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
     }
 
     splits {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
-            universalApk true  // If true, also generate a universal APK
+            universalApk false  // If true, also generate a universal APK
         }
     }
     signingConfigs {
@@ -128,8 +127,6 @@ dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:flipper-integration")
-     def multidex_version = "2.0.1"
-    implementation "androidx.multidex:multidex:$multidex_version"
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

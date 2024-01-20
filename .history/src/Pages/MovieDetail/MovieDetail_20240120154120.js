@@ -40,16 +40,16 @@ const MovieDetail = props => {
       dispatch(addFavorite(movie));
     }
   };
-
+const movieId = props.route.params.movieId;
   useEffect(() => {
     const getDetails = async () => {
-      const data = await GET(`/movie/${props.route.params.movieId}`);
+      const data = await GET(`/movie/${movieId}`);
       setDetails(data);
       setLoading(false);
     };
 
     getDetails();
-  }, []);
+  }, [movieId]);
   function handleInputToggle() {
     setInputModalVisible(!inputModalVisible);
   }

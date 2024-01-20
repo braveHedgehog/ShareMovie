@@ -123,13 +123,13 @@ const MovieDetail = props => {
               </TouchableOpacity>
             </View>
             <CastCard
+              title="Crew"
+              url={`/movie/${props.route.params.movieId}/credits`}
+            />
+            <CastCard
               title="Cast"
               url={`/movie/${props.route.params.movieId}/credits`}
               isForPage="details"
-            />
-            <CastCard
-              title="Crew"
-              url={`/movie/${props.route.params.movieId}/credits`}
             />
             <ContentInputModal
               visible={inputModalVisible}

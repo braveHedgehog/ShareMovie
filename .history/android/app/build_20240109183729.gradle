@@ -83,18 +83,23 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
     }
 
     splits {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
-            universalApk true  // If true, also generate a universal APK
+            universalApk false  // If true, also generate a universal APK
         }
     }
     signingConfigs {
-        release {
+        debug {
+            storeFile file('my-release-key.keystore')
+            storePassword '123456'
+            keyAlias 'my-key-alias'
+            keyPassword '123456'
+        }
+          release {
             if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
                 storeFile file(MYAPP_UPLOAD_STORE_FILE)
                 storePassword MYAPP_UPLOAD_STORE_PASSWORD
@@ -102,13 +107,6 @@ android {
                 keyPassword MYAPP_UPLOAD_KEY_PASSWORD
             }
         }
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
-          
     }
     buildTypes {
         debug {
@@ -128,8 +126,6 @@ dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:flipper-integration")
-     def multidex_version = "2.0.1"
-    implementation "androidx.multidex:multidex:$multidex_version"
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

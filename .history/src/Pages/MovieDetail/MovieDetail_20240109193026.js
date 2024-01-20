@@ -131,6 +131,7 @@ const MovieDetail = props => {
               title="Crew"
               url={`/movie/${props.route.params.movieId}/credits`}
             />
+            
             <ContentInputModal
               visible={inputModalVisible}
               onClose={handleInputToggle}

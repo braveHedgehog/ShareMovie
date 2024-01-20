@@ -47,7 +47,7 @@ const PersonMovie = props => {
               <PeopleJobCard
                 item={item}
                 onPress={() =>
-                  navigation.navigate('MoviePersonDetail', {
+                  navigation.navigate('MovieDetail', {
                     movieId: item.id,
                   })
                 }

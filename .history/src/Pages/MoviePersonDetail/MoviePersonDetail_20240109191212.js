@@ -8,7 +8,7 @@ import Styles from './MoviePersonDetail.style';
 import CastCard from '../../components/CastCard';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import ContentInputModal from '../../components/Modal/ContentImputModal/ContentInputModal';
-import database from '@react-native-firebase/database';
+import {firebase} from '@react-native-firebase/database';
 import auth from '@react-native-firebase/auth';
 import {useSelector, useDispatch} from 'react-redux';
 import {
@@ -20,12 +20,9 @@ const MoviePersonDetail = props => {
   const [loading, setLoading] = useState(true);
   const [details, setDetails] = useState();
   const [inputModalVisible, setInputModalVisible] = useState(false);
-
-  const movie = props.route.params;
-
   const favoriteMovie = useSelector(state => state.favorites.favoriteList);
   const dispatch = useDispatch();
-
+  const movie = props.route.params;
   const setFavoriteState = () => {
     if (favoriteMovie.includes(movie)) {
       dispatch(removeFavorite(movie.id));
@@ -33,7 +30,6 @@ const MoviePersonDetail = props => {
       dispatch(addFavorite(movie));
     }
   };
-
   useEffect(() => {
     const getDetails = async () => {
       const data = await GET(`/movie/${props.route.params.movieId}`);
@@ -59,7 +55,6 @@ const MoviePersonDetail = props => {
       username: userMail.split('@')[0],
       date: new Date().toISOString(),
     };
-    database().ref('comments/').push(contentObject);
     console.log(contentObject);
   }
 
@@ -72,7 +67,6 @@ const MoviePersonDetail = props => {
   };
 
   return (
-    <View>
     <ScrollView style={Styles.sectionBg}>
       {loading ? (
         <ActivityIndicator size="large" color={'white'} />
@@ -105,12 +99,14 @@ const MoviePersonDetail = props => {
             </View>
           </View>
           <Text style={Styles.heading}>GENRE</Text>
-          <View style={Styles.genreDetail}>{getGenre()}
-          <TouchableOpacity
-                style={Styles.button}
-                onPress={() => setFavoriteState()}>
-                <Text style={Styles.word}>Add Favorites</Text>
-              </TouchableOpacity></View>
+          <View style={Styles.genreDetail}>
+            {getGenre()}
+            <TouchableOpacity
+              style={Styles.button}
+              onPress={() => setFavoriteState()}>
+              <Text style={Styles.word}>Add Favorites</Text>
+            </TouchableOpacity>
+          </View>
           <CastCard
             title="Cast"
             url={`/movie/${props.route.params.movieId}/credits`}
@@ -130,8 +126,6 @@ const MoviePersonDetail = props => {
         </View>
       )}
     </ScrollView>
-      <FloatingButton handleFloatingSubmit={handleInputToggle} />
-    </View>
   );
 };
 

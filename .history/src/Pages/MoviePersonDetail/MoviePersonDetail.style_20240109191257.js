@@ -91,7 +91,4 @@ export default StyleSheet.create({
     padding: 10,
     marginLeft: 10,
   },
-  word: {
-    color: 'white',
-  },
 });

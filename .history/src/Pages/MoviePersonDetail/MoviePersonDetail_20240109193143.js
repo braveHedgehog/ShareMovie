@@ -1,17 +1,10 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
-import {
-  View,
-  Text,
-  ScrollView,
-  ActivityIndicator,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, ScrollView, ActivityIndicator, Image} from 'react-native';
 import {GET} from '../../services/Api';
 import {IMAGE_POSTER_URL} from '../../config';
-import Styles from './MovieDetail.Style';
+import Styles from './MoviePersonDetail.style';
 import CastCard from '../../components/CastCard';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import ContentInputModal from '../../components/Modal/ContentImputModal/ContentInputModal';
@@ -23,7 +16,7 @@ import {
   removeFavorite,
 } from '../../context/FavoriteMovies/FavoriteSlice';
 
-const MovieDetail = props => {
+const MoviePersonDetail = props => {
   const [loading, setLoading] = useState(true);
   const [details, setDetails] = useState();
   const [inputModalVisible, setInputModalVisible] = useState(false);
@@ -114,23 +107,20 @@ const MovieDetail = props => {
               </View>
             </View>
             <Text style={Styles.heading}>GENRE</Text>
-            <View style={Styles.genreDetail}>
-              {getGenre()}
-              <TouchableOpacity
-                style={Styles.button}
-                onPress={() => setFavoriteState()}>
-                <Text style={Styles.word}>Add Favorites</Text>
-              </TouchableOpacity>
-            </View>
-            <CastCard
-              title="Cast"
-              url={`/movie/${props.route.params.movieId}/credits`}
-              isForPage="details"
+          <View style={Styles.genreDetail}>{getGenre()}</View>
+          <CastCard
+            title="Cast"
+            url={`/movie/${props.route.params.movieId}/credits`}
+            isForPage="details"
+          />
+          <CastCard
+            title="Crew"
+            url={`/movie/${props.route.params.movieId}/credits`}
+          />
+          />
+          <FloatingButton handleFloatingSubmit={handleInputToggle} />
             />
-            <CastCard
-              title="Crew"
-              url={`/movie/${props.route.params.movieId}/credits`}
-            />
+          <FloatingButton handleFloatingSubmit={handleInputToggle} />
             <ContentInputModal
               visible={inputModalVisible}
               onClose={handleInputToggle}
@@ -144,4 +134,4 @@ const MovieDetail = props => {
   );
 };
 
-export default MovieDetail;
+export default MoviePersonDetail;

@@ -15,15 +15,14 @@ const CrewDetail = props => {
   const [loading, setLoading] = useState(true);
   const [activeContent, setActiveContent] = useState('description');
   const navigation = useNavigation();
-  const personId = props.route.params.personId;
   useEffect(() => {
     const getPeople = async () => {
-      const data = await GET(`person/${personId}`);
+      const data = await GET(`person/${props.route.params.personId}`);
       setPeople(data);
       setLoading(false);
     };
     getPeople();
-  }, [personId]);
+  }, []);
   const renderContent = () => {
     switch (activeContent) {
       case 'Bio':
@@ -33,10 +32,10 @@ const CrewDetail = props => {
       case 'Crew':
         return <PersonCrewMovie />;
       default:
-        return <BiographyContent />;
+        return null;
     }
   };
-  const BiographyContent = () => <PersonCard item={people} />;
+  const BiographyContent = () => <PersonCard person={people} />;
   const PersonMovie = () => (
     <PersonMovieCard
       title="Actor"

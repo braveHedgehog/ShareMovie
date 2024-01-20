@@ -3,8 +3,8 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 export default StyleSheet.create({
   trendingPeopleImage: {
-    height: Dimensions.get('window').height / 6,
-    width: Dimensions.get('window').width / 4,
+    height: Dimensions.get('window').height / 4,
+    width: Dimensions.get('window').width / 2,
     marginLeft: 20,
     borderRadius: 15,
   },

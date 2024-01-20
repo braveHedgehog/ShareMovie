@@ -38,17 +38,15 @@ const PersonMovie = props => {
       ) : (
         <View style={styles.heading}>
           <FlatList
-            style={styles.list}
             keyExtractor={item => item.id.toString()}
             data={movies}
-            numColumns={3}
-            //horizontal={true}
+            horizontal={true}
             renderItem={({item}) => (
               <PeopleJobCard
                 item={item}
                 onPress={() =>
-                  navigation.navigate('MoviePersonDetail', {
-                    movieId: item.id,
+                  navigation.navigate('MovieDetail', {
+                    id: item.id,
                   })
                 }
               />

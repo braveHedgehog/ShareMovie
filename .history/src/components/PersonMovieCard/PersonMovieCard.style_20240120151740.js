@@ -6,10 +6,9 @@ export default StyleSheet.create({
         //marginTop: 200,
         fontSize: 19,
         color: 'white',
-        marginTop: 30,
+        margin: 10,
       },
       list: {
-        margin: -20,
         width: Dimensions.get('window').width,
       },
 });
